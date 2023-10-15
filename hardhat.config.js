@@ -30,16 +30,14 @@ const privateKey =
     networks: {
       hardhat: {
         forking: {
-          // url: "https://mainnet.infura.io/v3/b6b76cf6eef242a197dd2916d295210c",
-          // blockNumber: 16045624,
-          url: "https://sepolia.infura.io/v3/b6b76cf6eef242a197dd2916d295210c",
+          url: process.env.SEPOLIA_URL,
           blockNumber: 4227276,
         },
         gas: 5000000
         // account:[]
       },
       sepolia: {
-        url: "https://sepolia.infura.io/v3/b6b76cf6eef242a197dd2916d295210c",
+        url: process.env.SEPOLIA_URL,
         accounts: [process.env.PRIVATE_KEY],
         gas: 2100000
       }
